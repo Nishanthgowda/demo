@@ -1,0 +1,41 @@
+<h2 style="color: #095C91;padding-bottom: 30px;">Recent reviews</h2>
+
+<div class="container">
+   
+    <div style="overflow: auto;">
+        <div class="mat-elevation-z8">
+            <mat-table [dataSource] = "listdata" matSort>
+                <mat-header-row *matHeaderRowDef="columns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns:columns;"></mat-row>
+    
+            <ng-container matColumnDef="reviewid">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Number</mat-header-cell>
+                <mat-header-cell *matCellDef="let element">{{element.reviewid}}</mat-header-cell>
+            </ng-container>
+
+    
+            <ng-container matColumnDef="username">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>User Name</mat-header-cell>
+                <mat-header-cell *matCellDef="let element">{{element.username}}</mat-header-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="pizzaname">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Name of the Pizza</mat-header-cell>
+                <mat-header-cell *matCellDef="let element">{{element.pizzaname}}</mat-header-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="review">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Review</mat-header-cell>
+                <mat-header-cell *matCellDef="let element">{{element.review}}</mat-header-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="stars">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Stars(out of 5)</mat-header-cell>
+                <mat-header-cell *matCellDef="let element">{{element.stars}}</mat-header-cell>
+            </ng-container>
+    
+            </mat-table>
+        </div>
+        
+    </div>
+</div>

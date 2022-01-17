@@ -1,0 +1,18 @@
+<nav class="navbar navbar-light" style="color: white;background-color: #095C91;">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Pizzeria</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a routerLink="/home">Home</a></li>
+        <li><a routerLink="/category">Our Menu</a></li>
+        <li><a routerLink="/displayreviews">Reviews</a></li>
+        <li><a routerLink="/cart">Cart</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a routerLink="/login" *ngIf="login">Login</a></li>
+        <li><a routerLink="/home" *ngIf="logout" (click)="logoutS()">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+<router-outlet></router-outlet>
