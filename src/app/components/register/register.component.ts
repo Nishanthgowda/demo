@@ -27,7 +27,7 @@ export class RegisterComponent implements OnInit {
         verticalPosition: 'top'
       });
       this.router.navigateByUrl("/home");
-      localStorage.setItem("isLoggedIn","true");
+      sessionStorage.setItem("isLoggedIn","true");
       this.app.login=false;
       this.app.logout=true;
      // this.dispreview.review = true;
