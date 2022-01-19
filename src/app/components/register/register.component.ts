@@ -20,6 +20,7 @@ export class RegisterComponent implements OnInit {
 
   onSubmit(form:NgForm)
   {
+    console.log(form.value);
     this.service.postuser(form.value).subscribe(res =>{
       console.log(form.value);
       this.snackbar.open("Successfully Registerd", '', {
@@ -27,7 +28,7 @@ export class RegisterComponent implements OnInit {
         verticalPosition: 'top'
       });
       this.router.navigateByUrl("/home");
-      sessionStorage.setItem("isLoggedIn","true");
+      sessionStorage.setItem("log","true");
       this.app.login=false;
       this.app.logout=true;
      // this.dispreview.review = true;

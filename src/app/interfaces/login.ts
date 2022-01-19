@@ -1,6 +1,6 @@
 export class ILogin {
     usersid!:number;
-    usersname!:string;
+    username!:string;
     email!:string;
     mobile!:string;
     password!:string;
